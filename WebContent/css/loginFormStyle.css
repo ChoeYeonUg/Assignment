@@ -1,87 +1,60 @@
 @charset "UTF-8";
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  overflow-x: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left : 30vw;	
+	margin-right : 30vw;
+	margin-top : 15vw;
+}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.codepen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 60px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  color: #000;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-.bg {
-  position: absolute;
-  left: -25vw;
-  top: -50vw;
-  width: 150vw;
-  height: 650vw;
-  background-size: cover;
-  z-index: -1;
-  -webkit-filter: blur(120px);
-  filter: blur(120px);
+button:hover {
+  opacity: 0.8;
 }
 
-span {
-  position: -webkit-sticky;
-  position: sticky;
-  top: calc(50% - 50px);
-  height: 100px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  mix-blend-mode: overlay;
-  font-family: "Fredoka One", sans-serif;
-  margin-left: 2px;
-  margin-right: 2px;
-  font-size: 120px;
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #000000;
 }
-a {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: -80px;
-  width: 180px;
-  text-align: center;
-  right: 0;
-  padding: 10px 20px;
+
+.container {
+  background-color:#f1f1f1;	
+  padding: 16px;
+}
+
+span.psw {
   float: right;
-  font-family: "Fredoka One", sans-serif;
-  mix-blend-mode: overlay;
-  color: #fff;
-  font-size: 25px;
-  z-index: 1;
-  background-color: #000;
-  border-radius: 20px 0 0;
-  text-decoration: none;
+  padding-top: 16px;
 }
 
-.scroll {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  bottom: 0;
-  pointer-events: none;
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
 
-@media (max-width: 660px) {
-  a {
-    display: none;
-  }
-  span {
-    font-size: 15vw;
-  }
-}

@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String id = (String)session.getAttribute("id");
+	String id = (String)session.getAttribute("id"); 
+	String loginBtn = ""; 
+	if(id != null)
+	loginBtn = "visibility:hidden;";
 %>
 
 <!DOCTYPE html>
@@ -14,12 +17,13 @@
 </head>
 <body>
 <nav>
-	<div>
+	<div style=<%=loginBtn%>>
 		<a href="/LoginAction" class="sign" role="button">Sign In</a>
 	</div>
+	<div>
+		<a href="/carpeDiem.jsp" class="sign" role="button">Carpe</a>
+	</div>
 </nav>
-
-	<h1>s: <%=id %></h1>
 	<div>
 	<h1 class="theme">What will your verse be?</h1>
 	<h2 class="paragraph">We don't read and write poetry because it's cute. <br>
