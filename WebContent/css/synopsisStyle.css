@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+	background-color : #212121;
+}
+
+a{
+	background-color : #212121;
+}
+
+p{
+	font-align : center;
+	
+}
+
+.theme{
+	position : absolute;
+	left : 5vw;
+	top : 10vw;
+}
+
+.paragraph{
+	position : absolute;
+	left : 5vw;
+	top : 20vw;
+	color : white;
+}
+
+.sign{
+	border : solid;
+	border-radius: 20px 40px 60px 80px ;
+}
